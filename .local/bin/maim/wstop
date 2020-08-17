@@ -1,0 +1,3 @@
+#!/bin/sh
+[ ! -d "~/Pictures/Screenshots" ] && mkdir -p ~/Pictures/Screenshots
+maim ~/Pictures/Screenshots/$(date | sed 's/ //g').png

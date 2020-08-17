@@ -1,0 +1,8 @@
+#!/bin/sh
+# Script to toggle a program given
+# Usage: toggleprogram <program name>
+
+# Check if a process id for picom exist and kill it if it does else open it
+[ -z $(pgrep $1) ] && ($1 &
+notify-send "Starting $1") || (killall $1
+notify-send "Killing $1")

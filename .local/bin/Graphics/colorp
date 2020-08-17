@@ -1,0 +1,6 @@
+#!/bin/sh
+
+colorcode=$(colorpicker --short --one-shot --preview)
+
+echo $colorcode | xclip -selection clipboard
+notify-send "$colorcode copied to clipboard"
